@@ -1,162 +1,180 @@
-/* =====================
-   COLOR SYSTEM
-===================== */
-:root{
-  --green-dark:#0F3D2E;
-  --green-leaf:#2E6B4F;
-  --cream:#F4F3EE;
-  --cream-glass:rgba(244,243,238,.88);
-  --coffee:#5A3A1B;
-  --gold-soft:#C7A44A;
-  --text-dark:#2B2B2B;
+:root {
+  --green-dark: #0F3D2E;
+  --green: #2E6B4F;
+  --cream: #F4F3EE;
+  --coffee: #5A3A1B;
+  --gold: #C7A44A;
 }
 
-/* =====================
-   BASE
-===================== */
-*{
-  box-sizing:border-box;
+/* ===== Reset / Base ===== */
+* {
+  box-sizing: border-box;
+  font-family: 'Vazirmatn', sans-serif;
 }
-body{
-  margin:0;
-  font-family:'Vazirmatn',sans-serif;
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: #1f2937;
   background:
-    linear-gradient(rgba(15,61,46,.55),rgba(15,61,46,.55)),
-    url("/images/bg-cafe.avif") center/cover fixed;
-  color:var(--text-dark);
+    linear-gradient(rgba(15,61,46,.55), rgba(15,61,46,.55)),
+    url("/images/bg-cafe.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-/* =====================
-   HEADER
-===================== */
-header{
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:var(--green-dark);
-  padding:14px 16px;
-  text-align:center;
-}
-header h1{
-  margin:0;
-  color:#fff;
-  font-weight:700;
-  letter-spacing:.5px;
-  font-size:1.1rem;
+/* ===== Header ===== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 16px;
+  background: rgba(15,61,46,0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,.15);
 }
 
-/* =====================
-   CONTAINER
-===================== */
-.container{
-  max-width:900px;
-  margin:auto;
-  padding:20px 14px 80px;
+header img {
+  height: 42px;
+  max-width: 100%;
+  object-fit: contain;
 }
 
-/* =====================
-   GLASS CARD
-===================== */
-.card{
-  background:var(--cream-glass);
-  backdrop-filter:blur(14px);
-  border-radius:20px;
-  padding:20px;
-  margin-bottom:26px;
-  box-shadow:0 10px 30px rgba(0,0,0,.15);
+/* ===== Container ===== */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 96px 16px 32px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 
-/* =====================
-   SECTION TITLE
-===================== */
-.section-title{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-size:1.1rem;
-  font-weight:700;
-  color:var(--green-dark);
-  border-bottom:2px solid var(--gold-soft);
-  padding-bottom:8px;
-  margin-bottom:18px;
+/* ===== Cards ===== */
+.card {
+  background: rgba(244,243,238,.9);
+  backdrop-filter: blur(16px);
+  border-radius: 18px;
+  padding: 16px 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,.25);
 }
 
-/* =====================
-   GRID
-===================== */
-.grid{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:12px;
+/* ===== Section title ===== */
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--green-dark);
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--gold);
 }
 
-/* Tablet */
-@media(min-width:600px){
-  .grid{
-    grid-template-columns:1fr 1fr;
+/* ===== Menu item ===== */
+.menu-item {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,.08);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.menu-item:last-child {
+  margin-bottom: 0;
+}
+
+.menu-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0,0,0,.15);
+}
+
+/* ===== Responsive ===== */
+
+/* موبایل */
+@media (max-width: 640px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  header img {
+    height: 36px;
+  }
+
+  .container {
+    padding: 80px 12px 24px;
   }
 }
 
-/* Desktop */
-@media(min-width:900px){
-  .grid{
-    grid-template-columns:1fr 1fr 1fr;
+/* تبلت */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 96px 20px 32px;
   }
 }
 
-/* =====================
-   MENU ITEM (با قیمت)
-===================== */
-.item{
-  background:rgba(255,255,255,.7);
-  border:1px solid rgba(0,0,0,.08);
-  border-radius:14px;
-  padding:14px 16px;
-  transition:.25s ease;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-}
-.item:hover{
-  background:#fff;
-  transform:translateY(-2px);
-}
-.item-name{
-  font-size:.95rem;
-  font-weight:500;
-  margin-bottom:6px;
-}
-.item-price{
-  font-size:1rem;
-  font-weight:700;
-  color:var(--green-dark);
-  align-self:flex-end;
+/* دسکتاپ */
+@media (min-width: 1025px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-/* =====================
-   FOOTER NOTE
-===================== */
-.footer-note{
-  text-align:center;
-  font-size:.9rem;
-  color:var(--green-dark);
-  margin-top:40px;
+/* دسکتاپ بزرگ */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+/* ===== Grid inside card ===== */
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-/* =====================
-   SMALL DEVICES
-===================== */
-@media(max-width:420px){
-  header h1{
-    font-size:1rem;
+/* ===== Menu item row ===== */
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: 0 10px 20px rgba(0,0,0,.08);
+}
+
+/* نام آیتم */
+.item-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #1f2937;
+  line-height: 1.6;
+  flex: 1;
+  padding-left: 12px;
+}
+
+/* قیمت */
+.item-price {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--green-dark);
+  white-space: nowrap;
+  text-align: left;
+}
+
+/* موبایل */
+@media (max-width: 640px) {
+  .item-name {
+    font-size: 0.9rem;
   }
-  .section-title{
-    font-size:1rem;
-  }
-  .item-name{
-    font-size:.9rem;
-  }
-  .item-price{
-    font-size:.95rem;
+
+  .item-price {
+    font-size: 0.85rem;
   }
 }
