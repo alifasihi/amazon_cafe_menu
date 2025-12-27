@@ -26,7 +26,7 @@ body::before {
   inset: 0;
   z-index: -1;
   background:    linear-gradient(rgba(15,61,46,.55), rgba(15,61,46,.55)),    url("/images/bg-cafe.jpg");
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   filter: blur(6px);
   transform: scale(1.08);
