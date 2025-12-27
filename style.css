@@ -178,3 +178,9 @@ header img {
     font-size: 0.85rem;
   }
 }
+
+.footer-note{
+  text-align: center;
+  padding: 16px;
+  color: #f4f3ee;
+}
