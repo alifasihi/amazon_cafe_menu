@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Café Amazon Menu</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="pb-24">
+    <!-- Header -->
+    <header class="header sticky top-0 z-50 border-b border-white/20">
+      <div
+        class="max-w-6xl mx-auto px-4 py-4 flex justify-center items-center gap-3"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2f/Cafe_Amazon_logo.svg/512px-Cafe_Amazon_logo.svg.png"
+          class="h-10 sm:h-12"
+          alt=""
+        />
+        <h1 class="text-xl sm:text-2xl font-bold text-white tracking-wide">
+          Café Amazon
+        </h1>
+      </div>
+    </header>
+
+    <!-- Search -->
+    <div class="fixed top-[72px] left-4 right-4 z-40 max-w-6xl mx-auto">
+      <input
+        id="search"
+        placeholder="جستجو در منو..."
+        class="search w-full rounded-full px-5 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--gold)]"
+      />
+    </div>
+
+    <main class="max-w-6xl mx-auto px-4 pt-32 space-y-16">
+      <!-- Section -->
+      <section class="glass p-6 sm:p-10" data-aos="fade-up">
+        <h2
+          class="section-title text-xl sm:text-2xl font-bold flex items-center gap-2"
+        >
+          <i class="fa-solid fa-snowflake text-[var(--green)]"></i>
+          بار سرد بر پایه قهوه
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div class="menu-item">آیس لاته</div>
+          <div class="menu-item">آیس آمریکانو</div>
+          <div class="menu-item">آفوگاتو</div>
+          <div class="menu-item">آفوگاتو پسته</div>
+          <div class="menu-item">فراپه دارچین</div>
+        </div>
+      </section>
+
+      <section class="glass p-6 sm:p-10" data-aos="fade-up">
+        <h2
+          class="section-title text-xl sm:text-2xl font-bold flex items-center gap-2"
+        >
+          <i class="fa-solid fa-mug-hot text-[var(--green)]"></i>
+          اسپرسو بار
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div class="menu-item">اسپرسو سینگل</div>
+          <div class="menu-item">اسپرسو دابل</div>
+          <div class="menu-item">لته</div>
+          <div class="menu-item">کاپوچینو</div>
+          <div class="menu-item">آمریکانو</div>
+          <div class="menu-item">کارامل ماکیاتو</div>
+        </div>
+      </section>
+
+      <section class="glass p-6 sm:p-10" data-aos="fade-up">
+        <h2
+          class="section-title text-xl sm:text-2xl font-bold flex items-center gap-2"
+        >
+          <i class="fa-solid fa-glass-martini text-[var(--green)]"></i>
+          ماکتیل
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div class="menu-item">موهیتو</div>
+          <div class="menu-item">لیموناد</div>
+          <div class="menu-item">موهیتو استروبری</div>
+          <div class="menu-item">کوبا لیبره</div>
+        </div>
+      </section>
+
+      <!-- Footer Note -->
+      <div class="glass p-6 sm:p-8 text-center" data-aos="fade-up">
+        <p class="font-semibold text-lg text-[var(--green-dark)]">
+          تمامی قیمت‌ها به تومان می‌باشد
+        </p>
+        <p class="text-sm opacity-70 mt-1">
+          لحظه‌های خاص خود را با Café Amazon بسازید.
+        </p>
+        <p class="text-sm opacity-70 mt-1">
+         توسعه داده شده با ❤️ توسط <a href="https://alifasihi.ir">ArgCap-Studio</a>
+        </p>
+      </div>
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+:root {
+  --green-dark: #0f3d2e;
+  --green: #2e6b4f;
+  --cream: #f4f3ee;
+  --coffee: #5a3a1b;
+  --gold: #c7a44a;
+}
+
+* {
+  font-family: "Vazirmatn", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(rgba(15, 61, 46, 0.55), rgba(15, 61, 46, 0.55)),
+    url("https://images.unsplash.com/photo-1694097030558-6e528f9b7d52?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #1f2937;
+}
+
+/* Glass Card */
+.glass {
+  background: rgba(244, 243, 238, 0.88);
+  backdrop-filter: blur(18px);
+  border-radius: 20px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* Header */
+.header {
+  background: rgba(15, 61, 46, 0.85);
+  backdrop-filter: blur(12px);
+}
+
+/* Menu Item */
+.menu-item {
+  background: white;
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.35s ease;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Section Title */
+.section-title {
+  color: var(--green-dark);
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Search */
+.search {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+}
+
+@media (max-width: 640px) {
+  body {
+    background-attachment: scroll;
+  }
+}
