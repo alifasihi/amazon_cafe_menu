@@ -48,9 +48,12 @@ body::before {
 }
 
 .site-header img {
-  height: 80px;
+  width: auto;
+  height: 120px;
   max-width: 100%;
+  object-fit: contain;
 }
+
 
 /* ===== Matte Fade ===== */
 .site-header::after {
@@ -154,7 +157,7 @@ body::before {
   }
 
   .site-header img {
-    height: 48px;
+    height: 64px;
   }
 
   .container {
@@ -179,10 +182,16 @@ body::before {
   .container {
     grid-template-columns: repeat(2, 1fr);
   }
+  .site-header img {
+    height: 96px;
+  }
 }
 
 @media (min-width: 1025px) {
   .container {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .site-header img {
+    height: 130px;
   }
 }
