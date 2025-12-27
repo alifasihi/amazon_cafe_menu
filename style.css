@@ -13,7 +13,7 @@
 body {
   min-height: 100vh;
   background: linear-gradient(rgba(15, 61, 46, 0.55), rgba(15, 61, 46, 0.55)),
-    url("https://images.unsplash.com/photo-1694097030558-6e528f9b7d52?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    url("./images/bg-cafe.avif");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
